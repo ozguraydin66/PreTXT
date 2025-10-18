@@ -48,7 +48,7 @@ make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='
   WordList$SentCount=NA; WordList$SentCount=SentCount
   WordList$WordLength=NA; WordList$WordLength=nchar(WordList$word)
   library(stringdist)
-  lexicon = data(paste0(lang,"rda"))
+  lexicon = data(paste0(lang,".rda"))
   WordList$OLD20 <- vwr::old20(WordList$word, lexicon[,1])
   WordList$ON.hamming <- vwr::coltheart.N(WordList$word, lexicon[,1],method="hamming")
   WordList$ON.levenshtein <- vwr::coltheart.N(WordList$word, lexicon[,1],method="levenshtein")
