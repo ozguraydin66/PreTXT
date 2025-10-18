@@ -18,5 +18,5 @@ count_paragraphs <- function(text.path, title=TRUE){
   parts <- trimws(parts)
   parts <- parts[nzchar(parts)]
   parLen=length(parts)
-  return(parLenh)
+  return(parLen)
 }
