@@ -1,0 +1,33 @@
+Package: PreTXT
+Title: Preprocessing text for analysis
+Version: 0.1.0
+Authors@R: 
+  c(person("Aydın", "Özgür", email = "aydino@ankara.edu.tr", role = c("aut","cre"),
+           comment = c(ORCID = "0000-0003-2925-4146")),
+    person("Özer", "Esmehan", role = c("cph"),
+           comment = c(ORCID = "0000-0001-5919-8072")),
+    person("Temeltürk", "Rahime Duygu", role = c("cph"),
+           comment = c(ORCID = "0000-0002-9303-5944")),
+    person("Artuvanlı Korkmaz", "Hazal", role = c("cph"),
+           comment = c(ORCID = "0000-0001-7739-8676")),
+    person("Acar", "Sema", role = c("cph"),
+           comment = c(ORCID = "0000-0003-3067-7154")))
+Description: Tokenisation involves dividing text into smaller units, such as words or sentences. This package converts raw text into a structured format that can be analysed. It also provides information such as the number of sentences and words in the text, the number of words in each sentence, the length of each word's letters and syllables, and orthographic measurements (OLD20, bigram, ON, etc.). As well as readability analyses developed specifically for Turkish, it can perform generally accepted text readability analyses. Furthermore, it offers text similarity analyses. 
+License: GPL (>= 2)
+Depends: R (>= 3.5.0)
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+VignetteBuilder: knitr
+URL: https://github.com/tl2624/apm/, https://tl2624.github.io/apm/
+BugReports: https://github.com/tl2624/apm/issues
+NeedsCompilation: no
+Packaged: 2025-10-10 19:01:33 UTC; OzgurAydın
+Author: Özgür Aydın [aut, cre] (ORCID:
+    <https://orcid.org/0000-0003-2925-4146>),
+  Esmehan Özer [cph] (ORCID: <https://orcid.org/0000-0001-5919-8072>),
+  Rahime Duygu Temeltürk [cph] (ORCID: <https://orcid.org/0000-0002-9303-5944>),
+  Hazal Artuvanlı Korkmaz [cph] (ORCID: <https://orcid.org/0000-0001-7739-8676>),
+  Sema Acar [cph] (ORCID: <https://orcid.org/0000-0003-3067-7154>)
+Maintainer: Özgür Aydın <aydino@ankara.edu.tr>
+Repository: CRAN
+Date/Publication: 2025-10-10 20:00:02 UTC
