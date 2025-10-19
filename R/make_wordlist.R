@@ -62,11 +62,9 @@ make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='
   colnames(WordList)[ncol(WordList)] <- "Bigram.Mean"
   WordList$syllable=NA
   if(lang=='turkish'){
-    reticulate::py_require("dizge")
-    jax <- reticulate::import("dizge") 
     for(i in 1:length(WordList$word)){
       WordList$syllable[i]= tryCatch({
-        length(jax$syllable_o(WordList$word[i]))
+        count_syl(WordList$word[i])
       }, error = function(e) {
         cat("An error occurred:", conditionMessage(e), "\n")
         NA
