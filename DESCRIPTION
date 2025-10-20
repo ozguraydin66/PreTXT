@@ -15,14 +15,8 @@ Authors@R:
 Description: Tokenisation involves dividing text into smaller units, such as words or sentences. This package converts raw text into a structured format that can be analysed. It also provides information such as the number of sentences and words in the text, the number of words in each sentence, the length of each word's letters and syllables, and orthographic measurements (OLD20, bigram, ON, etc.). As well as readability analyses developed specifically for Turkish, it can perform generally accepted text readability analyses. Furthermore, it offers text similarity analyses. 
 License: GPL (>= 2)
 Depends: R (>= 3.5.0)
-LazyData: true
-export(count_paragraphs)
-export(count_syl)
-export(make_wordlist)
-export(readable)
-export(sum_wordlist)
-export(txtSimilarity)
 Encoding: UTF-8
+LazyData: true
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 URL: https://github.com/tl2624/apm/, https://tl2624.github.io/apm/
