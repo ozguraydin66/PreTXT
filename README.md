@@ -83,8 +83,8 @@ txtSimilarity(text.paths=c(text.path=text.path.1, text.path=text.path.2),
 ```
 The 'readable()' function calculates the readability of the text using different formulas based on the type list returned by the 'make_wordlist()' function. For Turkish text, it uses the Ateşman (1997), Bezirci & Yılmaz (2010) and Çetinkaya (2010, 2018 )formulas. Readability cannot be calculated for languages other than Turkish at this time.
 ```javascript
-readable(wlist .type, ‘long’)
-readable(wlist .type, 'wide')
+readable(wlist.type, ‘long’)
+readable(wlist.type, 'wide')
 
 ```
 ## References
