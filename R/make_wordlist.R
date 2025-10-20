@@ -17,6 +17,10 @@
 #'                         bigram.type='mean',lang='turkish')
 #' @export
 make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='turkish'){
+  my_function <- function() {
+    data_name <- lang
+    get(data_name, envir = asNamespace("PreTXT"))
+  }
   library(dplyr)
   if(title==TRUE){i=0}
   if(title==FALSE & pgraph==1){i=0}
@@ -73,16 +77,3 @@ make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='
   }
   return(list(df,WordList))
 }
-#' Data for PreTXT
-#'
-#' @format A data frame with 29414 rows and 3 columns.
-#' describe{
-#' item{Character}{Single value - words}
-#' item{Character}{TSyllable of the word}
-#' item{Numeric}{Frequencies}
-#' }
-#' @source Created by Keuleers, E., & Brysbaert, M. (2010) [Wuggy]
-#'
-#' @examples
-#' data(turkish)
-"turkish"
