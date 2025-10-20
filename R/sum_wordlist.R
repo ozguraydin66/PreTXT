@@ -12,8 +12,9 @@ sum_wordlist <- function(df) {
   library(dplyr)
   df= df[[2]] %>% 
     dplyr::select(-LineNum) %>%
-    group_by(word,WordCount,SentCount,WordLength,OLD20,ON.hamming,
-             ON.levenshtein,Bigram.Mean,syllable) %>%
+    group_by(across(any_of(c('word','WordCount','SentCount','WordLength','OLD20',
+                             'ON.hamming','ON.levenshtein',
+                             'Bigram.Mean','syllable'))))%>%
     dplyr::summarise(across(c(n), sum)) %>%
     dplyr::arrange(desc(n)) %>%
     dplyr::rename(freq=n)%>%
