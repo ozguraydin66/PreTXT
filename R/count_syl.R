@@ -14,6 +14,7 @@ count_syl <- function(words) {
   }, integer(1))
 }
 
+#' Find syllables in any word
 #'
 #' @description This script finds the syllables in any word 
 #' @param word A vector includes words.
