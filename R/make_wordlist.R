@@ -12,16 +12,15 @@
 #' available for some language's texts. 
 #' Parameters: basque,dutch,english,french,german,italian,polish,serbian_cyrillic, 
 #' serbian_latin, spanish,turkish,vietnamese
+#' @param orth If TRUE, calculates the OLD20, bigram, ON.hamming, and 
+#' ON.levenshtein values.
 #' @return Returns the input text as a data frame.
 #' @examples make_wordlist(text.path='texts/text1.txt',pgraph=2,title=TRUE, 
 #'                         bigram.type='mean',lang='turkish')
 #' @export
-make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='turkish'){
-  my_function <- function() {
-    data_name <- lang
-    get(data_name, envir = asNamespace("PreTXT"))
-  }
+make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='turkish',orth=FALSE){
   library(dplyr)
+  library(stringdist)
   if(title==TRUE){i=0}
   if(title==FALSE & pgraph==1){i=0}
   if(title==FALSE & pgraph>1){i=1}
@@ -51,20 +50,25 @@ make_wordlist <- function(text.path,pgraph,title=FALSE,bigram.type='mean',lang='
   WordList$WordCount=NA; WordList$WordCount=WordCount
   WordList$SentCount=NA; WordList$SentCount=SentCount
   WordList$WordLength=NA; WordList$WordLength=nchar(WordList$word)
-  library(stringdist)
-  data(list=lang)
-  WordList$OLD20 <- vwr::old20(WordList$word, lexicon[,1])
-  WordList$ON.hamming <- vwr::coltheart.N(WordList$word, lexicon[,1],method="hamming")
-  WordList$ON.levenshtein <- vwr::coltheart.N(WordList$word, lexicon[,1],method="levenshtein")
-  z =strngrams::get_ngram_frequencies(lexicon$V1, lexicon$V3, type = "bigram", position_specific = TRUE)
-  newcol = ncol(WordList) +1
-  WordList[,newcol] <- strngrams::ngram_frequency(WordList$word, z, type = "bigram",
-                                                  position_specific = TRUE,
-                                                  frequency = "token",
-                                                  func = bigram.type,
-                                                  progressbar = TRUE)
-  colnames(WordList)[ncol(WordList)] <- "Bigram.Mean"
-  WordList$syllable=NA
+  if(orth==TRUE){
+      my_function <- function() {
+        data_name <- lang
+        get(data_name, envir = asNamespace("PreTXT"))
+      }
+      data(list=lang)
+      WordList$OLD20 <- vwr::old20(WordList$word, lexicon[,1])
+      WordList$ON.hamming <- vwr::coltheart.N(WordList$word, lexicon[,1],method="hamming")
+      WordList$ON.levenshtein <- vwr::coltheart.N(WordList$word, lexicon[,1],method="levenshtein")
+      z =strngrams::get_ngram_frequencies(lexicon$V1, lexicon$V3, type = "bigram", position_specific = TRUE)
+      newcol = ncol(WordList) +1
+      WordList[,newcol] <- strngrams::ngram_frequency(WordList$word, z, type = "bigram",
+                                                      position_specific = TRUE,
+                                                      frequency = "token",
+                                                      func = bigram.type,
+                                                      progressbar = TRUE)
+      colnames(WordList)[ncol(WordList)] <- "Bigram.Mean"
+  }
+    WordList$syllable=NA
   if(lang=='turkish'){
     for(i in 1:length(WordList$word)){
       WordList$syllable[i]= tryCatch({
