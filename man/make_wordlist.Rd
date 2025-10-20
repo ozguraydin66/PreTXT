@@ -9,7 +9,8 @@ make_wordlist(
   pgraph,
   title = FALSE,
   bigram.type = "mean",
-  lang = "turkish"
+  lang = "turkish",
+  orth = FALSE
 )
 }
 \arguments{
@@ -26,6 +27,9 @@ or the sum value (mean, summed)}
 available for some language's texts. 
 Parameters: basque,dutch,english,french,german,italian,polish,serbian_cyrillic, 
 serbian_latin, spanish,turkish,vietnamese}
+
+\item{orth}{If TRUE, calculates the OLD20, bigram, ON.hamming, and 
+ON.levenshtein values.}
 }
 \value{
 Returns the input text as a data frame.
