@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/ozguraydin66/PreTXT/blob/main/documents/pretxt.png?raw=true)
+![Logo](https://github.com/ozguraydin66/PreTXT/blob/main/documents/pretxt_sm.png?raw=true)
 
     
 # PreTXT
