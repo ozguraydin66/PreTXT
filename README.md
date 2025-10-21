@@ -32,6 +32,9 @@ Author and copyright holders
 
 Esmehan Özer (cph), R.Duygu Temeltürk (cph), Hazal Artuvanlı (cph), Sema Acar (cph)
 
+### Shiny app
+
+https://oaydin.shinyapps.io/pretxt/
 
 ## How to use
 
