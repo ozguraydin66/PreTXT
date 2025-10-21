@@ -16,13 +16,13 @@ PreTXT is an open-source R project. This package allows you to perform various o
 - Determine the bigram values of the words.
 - Determine the ON values of the words.
 
-Citation
+### Citation
 
 To cite arfima in publications use:
 
 Özer Esmehan, Acar Sema, Artuvanlı Hazal, Temeltürk Duygu & Aydın Özgür (2025). Okuma Becerisinin Klinik Değerlendirmesinde Kullanılacak Metinlerin Niceliksel Özellikleri: Bir Metin Analiz Aracı Önerisi, Pamukkale Üniversitesi Eğitim Fakültesi Dergisi.
 
-Support
+### Support
 
 This tool was developed under TÜBİTAK 1001 project number 122K308.  
 
@@ -33,12 +33,13 @@ Esmehan Özer (cph), R.Duygu Temeltürk (cph), Hazal Artuvanlı (cph), Sema Acar
 
 
 ## How to use
-Instalation
+
+### Instalation
 ```javascript
 library(devtools)
 install_github("ozguraydin66/PreTXT")
 ```
-Word list functions
+### Word list functions
 
 The count_paragraphs() function can be used to determine the number of paragraphs in the text located at the ‘text.path’ path
 ```javascript
@@ -73,7 +74,7 @@ The sum_wordlist() function lists the tokens returned by the make_wordlist() fun
 ```javascript
 wlist.token=sum_wordlist(wlist.type)
 ```
-Text similarity functions
+### Text similarity functions
 
 The txtSimilarity() function uses the Jaccard and Cousine similarity methods to calculate the similarity between two texts.
 ```javascript
@@ -86,7 +87,7 @@ pnum.2=count_paragraphs(text.path.2, TRUE)
 txtSimilarity(text.paths=c(text.path=text.path.1, text.path=text.path.2), 
               pgraph=c(pnum.1, pnum. 2), titles=c(TRUE, FALSE))
 ```
-Readability functions
+### Readability functions
 
 The 'readable()' function calculates the readability of the text using different formulas based on the type list returned by the 'make_wordlist()' function. For Turkish text, it uses the Ateşman (1997), Bezirci & Yılmaz (2010) and Çetinkaya (2010, 2018 )formulas. Readability cannot be calculated for languages other than Turkish at this time.
 ```javascript
