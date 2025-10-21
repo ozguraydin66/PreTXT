@@ -26,15 +26,22 @@ To cite arfima in publications use:
 
 This tool was developed under TÜBİTAK 1001 project number 122K308.  
 
-Author and copyright holders
+### Author and copyright holders
 
 Özgür Aydın (aut, cre), ozguraydin66@gmail.com 
 
 Esmehan Özer (cph), R.Duygu Temeltürk (cph), Hazal Artuvanlı (cph), Sema Acar (cph)
 
+The word lists in this package are provided by Wuggy: A multilingual pseudoword generator:
+https://github.com/WuggyCode/wuggy
+https://wuggycode.github.io/wuggy/
+
+Keuleers, E., Brysbaert, M. Wuggy: A multilingual pseudoword generator. Behavior Research Methods 42, 627–633 (2010). https://doi.org/10.3758/BRM.42.3.627
+
 ### Shiny app
 
 https://oaydin.shinyapps.io/pretxt/
+
 
 ## How to use
 
