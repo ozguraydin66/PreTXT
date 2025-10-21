@@ -39,7 +39,7 @@ Esmehan Özer (cph), R.Duygu Temeltürk (cph), Hazal Artuvanlı (cph), Sema Acar
 library(devtools)
 install_github("ozguraydin66/PreTXT")
 ```
-### Word list functions
+### Word list functions
 
 The count_paragraphs() function can be used to determine the number of paragraphs in the text located at the ‘text.path’ path
 ```javascript
