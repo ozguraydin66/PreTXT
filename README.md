@@ -71,8 +71,10 @@ orth: TRUE for orthographic measurements (OLD20, ON, bigram).
 
 The sum_wordlist() function lists the tokens returned by the make_wordlist() function as a type list. In other words, it displays the words from the text on a single line and provides frequency information.
 ```javascript
-wlist.token=sum_wordlist(wlist .type)
+wlist.token=sum_wordlist(wlist.type)
 ```
+Text similarity functions
+
 The txtSimilarity() function uses the Jaccard and Cousine similarity methods to calculate the similarity between two texts.
 ```javascript
 text.path.1 <- file.path(rootdir, "texts/text_1.txt")
@@ -84,6 +86,8 @@ pnum.2=count_paragraphs(text.path.2, TRUE)
 txtSimilarity(text.paths=c(text.path=text.path.1, text.path=text.path.2), 
               pgraph=c(pnum.1, pnum. 2), titles=c(TRUE, FALSE))
 ```
+Readability functions
+
 The 'readable()' function calculates the readability of the text using different formulas based on the type list returned by the 'make_wordlist()' function. For Turkish text, it uses the Ateşman (1997), Bezirci & Yılmaz (2010) and Çetinkaya (2010, 2018 )formulas. Readability cannot be calculated for languages other than Turkish at this time.
 ```javascript
 readable(wlist.type, ‘long’)
