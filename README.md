@@ -29,6 +29,7 @@ This tool was developed under TÜBİTAK 1001 project number 122K308.
 Author and copyright holders
 
 Özgür Aydın (aut, cre), ozguraydin66@gmail.com 
+
 Esmehan Özer (cph), R.Duygu Temeltürk (cph), Hazal Artuvanlı (cph), Sema Acar (cph)
 
 
