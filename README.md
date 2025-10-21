@@ -1,4 +1,7 @@
 
+![Logo](https://github.com/ozguraydin66/PreTXT/blob/main/documents/pretxt.png?raw=true)
+
+    
 # PreTXT
 
 PreTXT is an open-source R project. This package allows you to perform various operations on text.
