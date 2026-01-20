@@ -39,4 +39,14 @@ Imports:
     stringr,
     stringdist,
     tidytext,
-    readr
+    readr,
+    purrr,
+    stringi,
+    textTinyR,
+    textshape,
+    tm,
+    plyr,
+    magrittr
+Suggests: 
+    knitr,
+    rmarkdown

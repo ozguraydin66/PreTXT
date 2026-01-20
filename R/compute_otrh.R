@@ -1,5 +1,7 @@
 #' Data Frame içindeki Kelimeler için Dilsel Metrikleri Hesaplama
 #'
+#' @import plyr
+#' @import stringdist
 #' @param df_input The main data frame containing the words..
 #' @param word_col The name of the column containing the words (as a string, e.g., "word").
 #' @param lang The language to be used for the dictionary (e.g., 'turkish').
@@ -7,11 +9,6 @@
 #' @export
 
 compute_orth <- function(df_input, word_col, lang='turkish', bigram.type='mean') {
-  
-  library(dplyr)
-  library(vwr)
-  library(strngrams)
-  
   WordList <- df_input
   target_words <- WordList[[word_col]]
   WordList$WordLength <- nchar(as.character(target_words))
@@ -46,7 +43,6 @@ compute_orth <- function(df_input, word_col, lang='turkish', bigram.type='mean')
       tryCatch({ count_syl(as.character(x)) }, error = function(e) { NA })
     })
   }
-  
   message("Process completed.")
   return(WordList)
 }
